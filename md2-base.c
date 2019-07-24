@@ -145,8 +145,9 @@ MD2_Init (MD2_CTX *ctx)
 void
 MD2_Update (MD2_CTX *ctx, const BYTE *data, size_t len)
 {
+    size_t i = 0;
 
-    for (size_t i = 0; i < len; ++i) {
+    for (i = 0; i < len; ++i) {
 
 		ctx->data[ctx->len] = data[i];
 		ctx->len++;
